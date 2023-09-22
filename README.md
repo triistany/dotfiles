@@ -33,7 +33,6 @@
   - [AUR helper](#aur-helper)
   - [Media Transfer Protocol](#media-transfer-protocol)
   - [File Manager](#file-manager)
-  - [Trash](#trash)
   - [GTK Theming](#gtk-theming)
   - [Qt](#qt)
   - [Lightdm theming](#lightdm-theming)
@@ -43,10 +42,6 @@
   - [Start Hacking](#start-hacking)
 - [Gallery](#gallery)
   - [Qtile](#qtile)
-  - [Spectrwm](#spectrwm)
-  - [Openbox](#openbox)
-  - [Xmonad](#xmonad)
-  - [Dwm](#dwm)
 - [Keybindings](#keybindings)
   - [Windows](#windows)
   - [Apps](#apps)
@@ -57,14 +52,7 @@
 
 # Overview
 
-This guide will walk you through the process of building a desktop environment
-starting with a fresh Arch based installation. I will assume that you are
-comfortable with Linux based operating systems and command line interfaces.
-Because you are reading this, I will also assume that you've looked through some
-"tiling window manager" videos on Youtube, because that's where the rabbit hole
-starts. You can pick any window managers you want, but I'm going to use Qtile
-as a first tiling window manager because that's what I started with. This is
-basically a description of how I made my desktop environment from scratch.
+This guide will tell you how to build a desktop environment starting with a fresh Arch based installation. To make this you may be comfortable with Linux and command line interfaces. I'm gonna use a tiling window manager called Qtile that is one of my favourites.
 
 # Arch installation
 
