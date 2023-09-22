@@ -8,7 +8,7 @@
 
 ***Quick Links***
 - *Window manager configs*
-  - [Qtile](https://github.com/antoniosarosi/dotfiles/tree/master/.config/qtile)
+  - [Qtile](https://github.com/tryiing/dotfiles/tree/master/.config/qtile)
 - [Gallery (see how my configs look)](#gallery)
 - [Common keybindings for my configs](#keybindings)
 - [Software I use](#software)
