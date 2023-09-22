@@ -4,7 +4,7 @@
 
 ***Language***
 - [Spanish](./README.es.md)
-- English
+- [English](./README.md)
 
 ***Quick Links***
 - *Window manager configs*
