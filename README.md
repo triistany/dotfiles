@@ -56,19 +56,19 @@ This guide will tell you how to build a desktop environment starting with a fres
 
 # Arch installation
 
-First of all, you have to install a clean arch linux distro that you can find it in the arch installation guide
+First of all, you have to install a clean arch linux distro that you can find it in the 
 **[Arch Wiki](https://wiki.archlinux.org/index.php/Installation_guide)**
 doesn't tell you what to do after setting the root password, it suggests installing
-a bootloader, but before that I would make sure to have working internet:
+a bootloader, but before that make sure you have internet:
 
 ```bash
 pacman -S networkmanager
 systemctl enable NetworkManager
 ```
 
-Now you can install a bootloader and test it "safely", this is how to do it on
-modern hardware,
-[assuming you've mounted the efi partition on /boot](https://wiki.archlinux.org/index.php/Installation_guide#Example_layouts):
+Now you can install a bootloader, this is how to do it on
+modern hardware, make sure you have you've mounted the efi partition on
+[/boot](https://wiki.archlinux.org/index.php/Installation_guide#Example_layouts):
 
 ```bash
 pacman -S grub efibootmgr os-prober
@@ -85,13 +85,13 @@ passwd username
 usermod -aG wheel,video,audio,storage username
 ```
 
-In order to have root privileges we need sudo:
+Install sudo to have root privileges:
 
 ```bash
 pacman -S sudo
 ```
 
-Edit **/etc/sudoers** with nano or vim by uncommenting this line:
+Edit **/etc/sudoers** with nano or vim and uncomment this line:
 
 ```bash
 ## Uncomment to allow members of group wheel to execute any command
@@ -101,19 +101,12 @@ Edit **/etc/sudoers** with nano or vim by uncommenting this line:
 Now you can reboot:
 
 ```bash
-# Exit out of ISO image, unmount it and remove it
 exit
 umount -R /mnt
 reboot
 ```
 
-After logging in, your internet should be working just fine, but that's only if
-your computer is plugged in. If you're on a laptop with no Ethernet ports, you
-might have used **[iwctl](https://wiki.archlinux.org/index.php/Iwd#iwctl)**
-during installation, but that program is not available anymore unless you have
-installed it explicitly. However, we've installed
-**[NetworkManager](https://wiki.archlinux.org/index.php/NetworkManager)**,
-so no problem, this is how you connect to a wireless LAN with this software:
+After you log in, you may be have internet if you're with an ethernet cable connected to the pc. But if not, you have to use the **[NetworkManager](https://wiki.archlinux.org/index.php/NetworkManager)** that we've installed before.
 
 ```bash
 # List all available networks
@@ -132,9 +125,8 @@ sudo pacman -S xorg
 
 # Login and window manager
 
-First, we need to be able to login and open some programs like a browser and a
-terminal, so we'll start by installing **[lighdm](https://wiki.archlinux.org/index.php/LightDM)**
-and **[qtile](https://wiki.archlinux.org/index.php/Qtile)**. Lightdm will not
+First of all, we need to install basic programs like a terminal and a browser, but we need **[lighdm](https://wiki.archlinux.org/index.php/LightDM)**
+and **[qtile](https://wiki.archlinux.org/index.php/Qtile)** to have a working window manager. Lightdm will not
 work unless we install a **[greeter](https://wiki.archlinux.org/index.php/LightDM#Greeter)**.
 We also need
 **[xterm](https://wiki.archlinux.org/index.php/Xterm)** because that's the
@@ -161,19 +153,17 @@ reboot
 
 Now that you're in Qtile, you should know some of the default keybindings.
 
-| Key                  | Action                     |
+| Keys                 | Action                     |
 | -------------------- | -------------------------- |
-| **mod + return**     | launch xterm               |
+| **mod + return**     | launch defaut term (xterm) |
 | **mod + k**          | next window                |
 | **mod + j**          | previous window            |
 | **mod + w**          | kill window                |
-| **mod + [asdfuiop]** | go to workspace [asdfuiop] |
+| **mod + [AAA]**      | go to workspace [AAA]      |
 | **mod + ctrl + r**   | restart qtile              |
 | **mod + ctrl + q**   | logout                     |
 
-Before doing anything else, if you don't have a US keyboard, you should
-change it using *setxkbmap*. To open xterm use **mod + return**. For example to
-change your layout to spanish:
+Before doing anything else, put the correct keyboard language. Change it using *setxkbmap*. To open xterm use **mod + return**.
 
 ```bash
 setxkbmap es
