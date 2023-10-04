@@ -452,4 +452,4 @@ and for *alacritty*, [this one](https://github.com/antoniosarosi/dotfiles/tree/m
 | **mod + d**         | discord                       |
 | **mod + g**         | minecraft (gdlauncher)        |
 
-I don't use thunar and the trash, it's just to say that I don't have thouse in my config.
+I don't use thunar and the trash in my actual arch, it's just to say that I don't have thouse in my config.
