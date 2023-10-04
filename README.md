@@ -5,7 +5,7 @@ In this guide im gonna explain how to install my dotfiles and configuration for 
 # after arch installation
 
 After the installation of arch, make sure you have internet. 
-```bash```
+```bash
 pacman -S networkmanager
 systemctl enable NetworkManager
-```bash```
+```
