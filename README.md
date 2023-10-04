@@ -143,7 +143,7 @@ rofi-theme-selector
 
 Now you can start editing the config file and make it your own.
 Checkout my custom Qtile config
-[here](https://github.com/tryiing/dotfiles/tree/master/.config/qtile).
+[here](https://github.com/triistany/dotfiles/tree/master/.config/qtile).
 But before that I would recommend configuring basic utilities like audio,
 battery, mounting drives, etc.
 
